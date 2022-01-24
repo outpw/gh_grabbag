@@ -10,4 +10,4 @@ Next, we added the geojson layer to the map. You'll need the whole js directory 
 
 Finally, we activated GitHub pages for this repo...
 
-Front facing webpage available here: https://outpw.github.io/GH_GrabBag
+Front facing web map available here: https://outpw.github.io/gh_grabbag/
