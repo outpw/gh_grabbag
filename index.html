@@ -4,6 +4,7 @@
 <title>Plain Leaflet API</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+<script src="js\leaflet-0.7.2\leaflet.ajax.min.js"></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
@@ -25,6 +26,10 @@ var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v
 var map = L.map('map')
   .addLayer(mapboxTiles)
   .setView([39.756060, -104.994436], 17);
+
+var geojsonLayer = new L.GeoJSON.AJAX("https://raw.githubusercontent.com/outpw/gh_grabbag/main/data/coors.geojson");
+geojsonLayer.addTo(map);
+
 </script>
 </body>
 </html>
